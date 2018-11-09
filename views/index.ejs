@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Shopping Cart</title>
+      <script src="/javascripts/jquery-3.3.1.min.js"></script>
+      <link rel="stylesheet" href="/stylesheets/bootstrap.min.css"/>
+      <script src="/javascripts/bootstrap.min.js"></script>
+      <script src="/javascripts/index.js"></script>
+  </head>
+  <body>
+  <div class="container">
+      <div class="display-1">Shopping Cart</div>
+      <br/>
+      <form class="auto-submit" method="post">
+          <table border="1px" class="table table-striped">
+              <tr>
+                  <th>Item</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+              </tr>
+              <% items.forEach((item) => { %>
+                  <tr>
+                      <td><h4><%= item.name %></h4></td>
+                      <td><h4>$<%= item.price %></h4></td>
+                      <td><input class="item" type="number" title="quantity" name="<%= item.name %>" value="<%= item.quantity %>"/></td>
+                  </tr>
+              <% }); %>
+          </table>
+          <h1>Total Number: <span id="total_number"></span></h1>
+          <h1 class="d-none" id="before">Cost Before Discounts: <span id="price_before"></span></h1>
+          <h1 class="d-none" id="dvd">DVD Discount: <span id="dvd_discount"></span></h1>
+          <h1 class="d-none" id="blu">Blu-Ray Discount: <span id="blu_discount"></span></h1>
+          <h1 class="d-none" id="bulk">Bulk Discount: <span id="bulk_discount"></span></h1>
+          <h1>Total Cost: $<span id="total_price"></span></h1>
+      </form>
+  </div>
+  </body>
+</html>
