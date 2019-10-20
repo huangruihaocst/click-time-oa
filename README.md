@@ -30,4 +30,4 @@ Ruihao Huang (huangruihao1996@gmail.com)
 
 ## About
 
-If you have any question about the project, please do not hesistate to contact me at huangruihao1996@gmail.com or (650) 880-9099.
+If you have any question about the project, please do not hesistate to contact me at huangruihao1996@gmail.com.
